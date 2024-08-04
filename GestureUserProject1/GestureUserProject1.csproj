@@ -37,6 +37,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,7 +57,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="PDollar.cs" />
+    <Compile Include="PennyPincher.cs" />
+    <Compile Include="PointStroke.cs" />
     <Compile Include="Template.cs" />
+    <Compile Include="TemplateDictionary.cs" />
+    <Compile Include="TemplateP.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -96,6 +103,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Templates\6.2.txt" />
+    <Resource Include="Templates\6.3.txt" />
+    <Resource Include="Templates\7.2.txt" />
+    <Resource Include="Templates\7.3.txt" />
+    <Resource Include="Templates\arr2.txt" />
+    <Resource Include="Templates\arr3.txt" />
+    <Resource Include="Templates\loop2.txt" />
+    <Resource Include="Templates\loop3.txt" />
+    <Resource Include="Templates\^2.txt" />
+    <Resource Include="Templates\^3.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

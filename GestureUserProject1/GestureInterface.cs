@@ -5,12 +5,7 @@ namespace GestureUserProject1
 {
     public interface GestureInterface
     {
-        void AddPoint(Point point);
-        List<Point> Resample(List<Point> points, int n);
-        List<Point> RotateZero(List<Point> points);
-        (List<Point> corners, double width, double height) CalculateBoundingBox(List<Point> points);
-        List<Point> ScaleToSquare(List<Point> points, int size);
-
-
+        (Template bestMatch, double score) Recognize(List<Point> userGesture, List<Template> templates);
+        void addTemplate(string name, List<Point> points);
     }   
 }

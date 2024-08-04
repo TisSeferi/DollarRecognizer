@@ -8,10 +8,10 @@ namespace GestureUserProject1
         public string Name { get; private set; }
         public List<Point> Points { get; private set; }
 
-        public Template(string name, List<Point> points)
+        public Template(string name, List<Point> pointStroke)
         {
             Name = name;
-            Points = new List<Point>(points);
+            Points = new List<Point>(pointStroke);
         }
     }
 }

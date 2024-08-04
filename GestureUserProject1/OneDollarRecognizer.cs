@@ -44,6 +44,7 @@ namespace GestureUserProject1
                     double qy = pt1.Y + ((I - D) / d) * (pt2.Y - pt1.Y);
                     Point q = new Point(qx, qy);
                     dstPts.Add(q); // Append the new point 'q' to the destination list
+                    points.Insert(i, q);
                     D = 0.0;
                 }
                 else

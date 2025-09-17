@@ -1,6 +1,6 @@
 # Dollar Recognizer (Multi-Stroke) — README
 
-A lightweight, fast gesture-recognition toolkit that supports **multi-stroke** drawing. It implements three classic families of recognizers side-by-side—**$1**, **$N**, and a **Penny Pincher** (feature-based prefilter)—and returns **uniform statistics** so you can compare results, tune thresholds, and pick the best recognizer for your app or device constraints.
+A lightweight, fast gesture-recognition toolkit with built in template storing that supports **multi-stroke** drawing. It implements three classic families of recognizers side-by-side—**$1**, **$N**, and a **Penny Pincher** (feature-based prefilter)—and returns **uniform statistics** so you can compare results, tune thresholds, and pick the best recognizer for your app or device constraints.
 
 ---
 
@@ -28,8 +28,6 @@ Gesture recognizers are often presented in isolation. This repo lets you:
 | **$1** | ❌ (unistroke) – used here by concatenating or pre-combining strokes when desired | Rotation, scale, translation | `1 - normalized_path_distance` | Very fast | Prototyping; single-stroke or pre-combined paths |
 | **$N** | ✅ (true multi-stroke) | Rotation, scale, translation; **stroke order & direction invariance** via permutations/heuristics | `1 - normalized_min_distance_over_permutations` | Fast–Moderate (depends on templates, permutations) | Natural multi-stroke input (e.g., characters, symbols) |
 | **Penny Pincher (Prefilter)** | ✅ | Mostly translation/scale via normalization; coarse angle bins | Low-cost feature distance to **prune** template set before $N/$1 | **Very fast** | Mobile/embedded; large template sets; early pruning |
-
-> **Note:** In this project, “Penny Pincher” refers to a **feature-based prefilter** you can toggle on to cheaply rule out unlikely templates (before running $N or $1). It computes simple, robust features (see below) and returns a **feature score** plus a **pass/fail** based on a threshold you control.
 
 ---
 

@@ -45,10 +45,7 @@ Gesture recognizers are often presented in isolation. This repo lets you:
 ### Matching (per recognizer)
 - **$1 recognizer**  
   - Distance metric: average path distance between candidate and template.  
-  - Score:  
-    $$
-    \text{score} = 1 - \frac{\text{distance}}{0.5 \cdot \sqrt{2} \cdot \text{SquareSize}}
-    $$
+  - Score: $$\= 1 - \frac{\text{distance}}{0.5 \cdot \sqrt{2} \cdot \text{SquareSize}}$$
   - Returns best template and stats (distance, rotation, etc.).
 
 - **$N recognizer**  
